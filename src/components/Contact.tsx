@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, Github, Twitter } from "lucide-react";
+import { Mail, Linkedin, Instagram, Twitter } from "lucide-react";
 
 const Contact = () => {
   const socialLinks = [
@@ -16,10 +16,10 @@ const Contact = () => {
       color: "hover:text-[#0077B5]"
     },
     {
-      icon: Github,
-      label: "GitHub",
-      href: "https://github.com/yourusername",
-      color: "hover:text-foreground"
+      icon: Instagram,
+      label: "Instagram",
+      href: "https://instagram.com/yourusername",
+      color: "hover:text-[#E4405F]"
     },
     {
       icon: Twitter,
