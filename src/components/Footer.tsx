@@ -11,7 +11,7 @@ const Footer = () => {
             Made with <Heart className="w-4 h-4 text-primary fill-primary" /> using Lovable
           </p>
           <p className="text-xs text-muted-foreground">
-            © {currentYear} Your Name. All rights reserved.
+            © {currentYear} Tanja Dimitrijevic Perovic. All rights reserved.
           </p>
         </div>
       </div>

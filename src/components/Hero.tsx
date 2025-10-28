@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
+import avatarImage from "@/assets/avatar.jpg";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 const Hero = () => {
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({
@@ -18,6 +20,14 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container px-4 py-20 text-center animate-fade-in">
         <div className="max-w-4xl mx-auto space-y-8">
+          {/* Avatar */}
+          <div className="flex justify-center mb-6 animate-scale-in">
+            <Avatar className="h-32 w-32 border-4 border-primary/20 shadow-xl">
+              <AvatarImage src={avatarImage} alt="Tanja Dimitrijevic Perovic" />
+              <AvatarFallback className="text-4xl bg-primary text-primary-foreground">TD</AvatarFallback>
+            </Avatar>
+          </div>
+          
           <div className="inline-block px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-4">
             <p className="text-sm font-medium text-primary">Available for opportunities</p>
           </div>
