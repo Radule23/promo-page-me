@@ -1,17 +1,30 @@
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
 
-import React from "react";
+const queryClient = new QueryClient();
 
-export default function App() {
-   return (
-    <div id="app-root">
-      <header>Header</header>
-      <main>Content placeholder</main>
-      <footer>Footer</footer>
-    </div>
-  );
+// Use basename only in production (GitHub Pages), not in development
+const basename = import.meta.env.PROD ? '/promo-page-me' : '/';
 
-
-}
-
-
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <HashRouter basename={basename}>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </HashRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
+export default App;
 
