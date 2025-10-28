@@ -27,7 +27,7 @@ const App = () => (
   </QueryClientProvider>
 );
 
-export default App;
+//export default App;
 */
 return <div>App works</div>;
 
