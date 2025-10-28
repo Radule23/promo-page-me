@@ -4,4 +4,4 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: "/promo-page-me/",   // obavezno za GitHub Pages
   plugins: [react()],
-})
+});
