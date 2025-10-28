@@ -2,7 +2,7 @@ name: Deploy Vite app to GitHub Pages
 
 on:
   push:
-    branches: [ main ]   # ili master, zavisi od tvog repoa
+    branches: [ main ]   # pokreće se kada gurneš na main
 
 jobs:
   build-and-deploy:
@@ -29,5 +29,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
-
 
