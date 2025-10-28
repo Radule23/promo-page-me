@@ -9,4 +9,5 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  base: '/promo-page-me/', // 👈 must match your repo name
 })
