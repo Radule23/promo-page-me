@@ -4,7 +4,10 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/promo-page-me/', // 👈 must match your repo name
+  base: '/promo-page-me/',
+  server: {
+    port: 8080
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
