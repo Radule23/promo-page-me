@@ -12,7 +12,8 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === 'development' && componentTagger(),
   ].filter(Boolean),
-  base: '/promo-page-me/',
+//  base: '/promo-page-me/',
+  base: '/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
